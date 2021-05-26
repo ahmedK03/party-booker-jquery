@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Assignment</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icons-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Start of navbar section -->
+    <nav class="navbar navbar-expand-sm  fixed-top">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Party</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+             <span class="navbar-toggler-icon"></span>
+             </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="fas fa-home"></i>  Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#event"><i class="fas fa-guitar"></i> Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="#singers"><i class="fas fa-microphone-alt"></i> performers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="#contact"><i class="far fa-id-badge"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ! end of Navbar section -->
+    <!-- start of Home Section -->
+    <header class="vh-100" id="home">
+        <div class="title d-flex align-items-center justify-content-center flex-column">
+            <div class="title_span text-center">
+                <h1>Feel the Base</h1>
+                <p class="text-white mt-1">Thrilling performance</p>
+            </div>
+            <div class="scroll-down">
+            </div>
+        </div>
+    </header>
+    <div class="home__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#050000" fill-opacity="1" d="M0,192L80,181.3C160,171,320,149,480,165.3C640,181,800,235,960,240C1120,245,1280,203,1360,181.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    </div>
+    <!-- ! end of Home section -->
+    <!-- start of event Down Section -->
+    <section class="event-countDown" id="countDown">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box1 d-flex justify-content-around" id="timer_countDown">
+                        <div class="timer d-flex flex-column">
+                            <p class="text-muted" id="days">000</p><span class="text-uppercase text-muted text-center">Days</span></div>
+                        <div class="timer d-flex flex-column">
+                            <p class="text-muted" id="hrs">000</p><span class="text-uppercase text-muted text-center">Hrs</span></div>
+                        <div class="timer d-flex flex-column">
+                            <p class="text-muted" id="min">000</p><span class="text-uppercase text-muted text-center">Min</span></div>
+                        <div class="timer d-flex flex-column">
+                            <p class="text-muted" id="sec">000</p><span class="text-uppercase text-muted text-center">Secs</span></div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="ml-md-2 box2 text-uppercase" id="event_join">
+                        <h2><span><i class="fas fa-hat-cowboy-side mr-3"></i></span> join us now</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ! end of event counntDown -->
+    <!-- start of event section -->
+    <div class="event__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273034" fill-opacity="1" d="M0,96L24,80C48,64,96,32,144,48C192,64,240,128,288,144C336,160,384,128,432,133.3C480,139,528,181,576,197.3C624,213,672,203,720,197.3C768,192,816,192,864,176C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,208C1344,192,1392,160,1416,144L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </div>
+    <section class="event overflow-hidden" id="event">
+        <h2 class="d-block text-center text-white">EVENT DETAILS</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 card_1">
+                    <div class="icon">
+                        <span><i class="far fa-calendar-check"></i></span>
+                    </div>
+                    <div class="flyerOB">
+                        <div class="flyer text-center ">
+                            <h2 class="mt-4 py-2">Event Date & Time</h2>
+                            <p class="mt-3" id="eventDate">17 May 2021</p>
+                            <span>@</span> <span class="event_time"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 card_2">
+                    <div class="icon">
+                        <span><i class="far fa-compass"></i></span>
+                    </div>
+                    <div class="flyerOB">
+                        <div class="flyer text-center ">
+                            <h2 class="mt-4 py-2">Event Location</h2>
+                            <p class="mt-3">Al Mannara Center</p>
+                            <span class="">5th settelment , behind Al-moshir Mosque</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="event__bottom__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273034" fill-opacity="1" d="M0,160L26.7,154.7C53.3,149,107,139,160,122.7C213.3,107,267,85,320,85.3C373.3,85,427,107,480,122.7C533.3,139,587,149,640,144C693.3,139,747,117,800,112C853.3,107,907,117,960,101.3C1013.3,85,1067,43,1120,37.3C1173.3,32,1227,64,1280,69.3C1333.3,75,1387,53,1413,42.7L1440,32L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+    </div>
+    <!-- ! end of event Details -->
+    <!-- start of singers section -->
+    <div class="singers__top__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e4e3e8" fill-opacity="1" d="M0,224L26.7,202.7C53.3,181,107,139,160,149.3C213.3,160,267,224,320,256C373.3,288,427,288,480,282.7C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,229.3C1013.3,224,1067,224,1120,218.7C1173.3,213,1227,203,1280,170.7C1333.3,139,1387,85,1413,58.7L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    </div>
+    <section id="singers" class="singers overflow-hidden">
+        <h2 class="d-block text-center">EVENT PERFORMERS</h2>
+        <div class="container">
+            <div class="singers_card ">
+                <div class="singer_title bg-warning card-header">
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="singer_details bg-primary card-body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolorem blanditiis delectus molestiae fuga aliquam, nam quam nostrum doloribus omnis!</p>
+                </div>
+            </div>
+            <div class="singers_card">
+                <div class="singer_title bg-warning card-header">
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="singer_details bg-primary card-body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolorem blanditiis delectus molestiae fuga aliquam, nam quam nostrum doloribus omnis!</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="singers__bottom__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e4e3e8" fill-opacity="1" d="M0,96L26.7,122.7C53.3,149,107,203,160,192C213.3,181,267,107,320,69.3C373.3,32,427,32,480,32C533.3,32,587,32,640,37.3C693.3,43,747,53,800,80C853.3,107,907,149,960,149.3C1013.3,149,1067,107,1120,74.7C1173.3,43,1227,21,1280,21.3C1333.3,21,1387,43,1413,53.3L1440,64L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+    </div>
+    <!-- ! end of singers section -->
+    <!-- start of contact section -->
+    <div class="contact__top_separator" id="contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 310"><path fill="#FF9000" fill-opacity="1" d="M0,256L16,229.3C32,203,64,149,96,149.3C128,149,160,203,192,224C224,245,256,235,288,213.3C320,192,352,160,384,165.3C416,171,448,213,480,218.7C512,224,544,192,576,197.3C608,203,640,245,672,250.7C704,256,736,224,768,218.7C800,213,832,235,864,213.3C896,192,928,128,960,112C992,96,1024,128,1056,165.3C1088,203,1120,245,1152,224C1184,203,1216,117,1248,117.3C1280,117,1312,203,1344,202.7C1376,203,1408,117,1424,74.7L1440,32L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"></path></svg>
+
+    </div>
+    <section class="contact">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h2 class="text-uppercase text-white">questions?</h2>
+                </div>
+                <div class="col-md-8 d-flex">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="icon d-flex justify-content-center align-items-center ml-3">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="icon d-flex justify-content-center align-items-center ml-3">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="icon d-flex justify-content-center align-items-center ml-3">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="icon d-flex justify-content-center align-items-center ml-3">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="icon d-flex justify-content-center align-items-center ml-3">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+            <form class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="col-12 form-group mt-3">
+                    <textarea class="form-control" id="textArea" placeholder="Message" rows="3" maxlength="100"></textarea>
+                </div>
+                <p class="col-12 my-3" id="characterSet">
+                    <span class="text-danger" id="letter_limiter">100</span> characters left.</p>
+                <div class="col text-center">
+                    <span></i><button class="btn text-uppercase"><i class="far fa-paper-plane"></i> Send Message</button></span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="contact__bottom__separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff9000" fill-opacity="1" d="M0,128L16,128C32,128,64,128,96,117.3C128,107,160,85,192,112C224,139,256,213,288,208C320,203,352,117,384,69.3C416,21,448,11,480,21.3C512,32,544,64,576,96C608,128,640,160,672,154.7C704,149,736,107,768,80C800,53,832,43,864,58.7C896,75,928,117,960,122.7C992,128,1024,96,1056,85.3C1088,75,1120,85,1152,90.7C1184,96,1216,96,1248,101.3C1280,107,1312,117,1344,101.3C1376,85,1408,43,1424,21.3L1440,0L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z"></path></svg>
+    </div>
+    <!-- ! end of contact section -->
+    <!-- start of footer section -->
+    <footer>
+        <p class="text-center">copy right <span><i class="fas fa-trademark text-white"></i></span></p>
+    </footer>
+    <button class="up-btn justify-content-center align-items-center">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- ! end of footer section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="js/main.js "></script>
+</body>
+
+</html>
